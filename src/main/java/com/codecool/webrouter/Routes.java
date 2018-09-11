@@ -21,7 +21,13 @@ public class Routes {
     @WebRoute(path = "/test")
     public static String test(HttpExchange exchange) {
 
-        return "<h1>Test page</h1>" +
-                "<a href=\"/\">Back to main page</a>";
+        return "<!doctype html>" +
+                "<html lang=\"en\">" +
+                "<head><title>Test page</title></head>" +
+                "<body>" +
+                "<h2>Test page</h2>" +
+                "<a href=\"/\">Back to main page</a>" +
+                "</body>" +
+                "</html>";
     }
 }
