@@ -13,7 +13,15 @@ public class Routes {
                 "<body>" +
                 "<h1>WebRoute</h1>" +
                 "<h2>Index page</h2>" +
+                "<a href=\"/test\">Test page</a>" +
                 "</body>" +
                 "</html>";
+    }
+
+    @WebRoute(path = "/test")
+    public static String test(HttpExchange exchange) {
+
+        return "<h1>Test page</h1>" +
+                "<a href=\"/\">Back to main page</a>";
     }
 }
